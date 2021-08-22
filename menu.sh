@@ -28,6 +28,7 @@ echo -e "   \e[032;1mTime:\e[0m $WKT"
 echo -e "   \e[032;1mIPVPS:\e[0m $IPVPS"
 echo -e "   \e[1;32m============================================================\e" | lolcat
 echo -e  ""
+echo -e  ""
 echo -e   "   \e[1;32m============================================================\e" | lolcat
 echo -e   "                             PANEL MENU\e" | lolcat 
 echo -e   "   \e[1;32m============================================================\e" | lolcat
@@ -45,11 +46,10 @@ echo -e   "   10\e[1;33m)\e[m Panel Trojan"
 echo -e   "   \e[1;32m============================================================\e" | lolcat
 echo -e   "   y)   System Menu" | lolcat
 echo -e   "   \e[1;32m============================================================\e" | lolcat
-echo -e   "   \e[1;32m============================================================\e" | lolcat
 echo -e   "   x)   Exit" | lolcat
 echo -e   "   \e[1;32m============================================================\e" | lolcat
 echo -e   ""
-read -p "     Select From Options [1-27 or x] :  " menu
+read -p "     Select From Options [1-10 or x,y] :  " menu
 echo -e   ""
 case $menu in
 1)
