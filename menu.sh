@@ -16,15 +16,17 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	swap=$( free -m | awk 'NR==4 {print $2}' )
 	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
 
-	echo -e "   \e[032;1mCPU Model:\e[0m $cname"
-	echo -e "   \e[032;1mNumber Of Cores:\e[0m $cores"
-	echo -e "   \e[032;1mCPU Frequency:\e[0m $freq MHz"
-	echo -e "   \e[032;1mTotal Amount Of RAM:\e[0m $tram MB"
-	echo -e "   \e[032;1mSystem Uptime:\e[0m $up"
-	echo -e "   \e[032;1mIsp Name:\e[0m $ISP"
-	echo -e "   \e[032;1mCity:\e[0m $CITY"
-	echo -e "   \e[032;1mTime:\e[0m $WKT"
-	echo -e "   \e[032;1mIPVPS:\e[0m $IPVPS"
+echo -e "   \e[1;32m============================================================\e" | lolcat
+echo -e "   \e[032;1mCPU Model:\e[0m $cname"
+echo -e "   \e[032;1mNumber Of Cores:\e[0m $cores"
+echo -e "   \e[032;1mCPU Frequency:\e[0m $freq MHz"
+echo -e "   \e[032;1mTotal Amount Of RAM:\e[0m $tram MB"
+echo -e "   \e[032;1mSystem Uptime:\e[0m $up"
+echo -e "   \e[032;1mIsp Name:\e[0m $ISP"
+echo -e "   \e[032;1mCity:\e[0m $CITY"
+echo -e "   \e[032;1mTime:\e[0m $WKT"
+echo -e "   \e[032;1mIPVPS:\e[0m $IPVPS"
+echo -e "   \e[1;32m============================================================\e" | lolcat
 echo -e  ""
 echo -e   "   \e[1;32m============================================================\e" | lolcat
 echo -e   "                             PANEL MENU\e" | lolcat 
@@ -41,29 +43,8 @@ echo -e   "   9\e[1;33m)\e[m Panel VLess"
 echo -e   "   10\e[1;33m)\e[m Panel Trojan"
 #echo -e   "   9\e[1;33m)\e[m Panel TrojanGO"
 echo -e   "   \e[1;32m============================================================\e" | lolcat
-echo -e   "                             SYSTEM MENU\e" | lolcat 
+echo -e   "   y)   System Menu" | lolcat
 echo -e   "   \e[1;32m============================================================\e" | lolcat
-echo -e   "   11\e[1;33m)\e[m  Add Subdomain Host For VPS"
-echo -e   "   12\e[1;33m)\e[m  Renew Certificate V2RAY"
-echo -e   "   13\e[1;33m)\e[m  Change Port All Account"
-echo -e   "   14\e[1;33m)\e[m  Autobackup Data VPS"
-echo -e   "   15\e[1;33m)\e[m  Backup Data VPS"
-echo -e   "   16\e[1;33m)\e[m  Restore Data VPS"
-echo -e   "   17\e[1;33m)\e[m  Webmin Menu"
-echo -e   "   18\e[1;33m)\e[m  Limit Bandwith Speed Server"
-echo -e   "   19\e[1;33m)\e[m  Check Usage of VPS Ram" 
-echo -e   "   20\e[1;33m)\e[m  Reboot VPS"
-echo -e   "   21\e[1;33m)\e[m  Speedtest VPS"
-echo -e   "   22\e[1;33m)\e[m  Information Display System" 
-echo -e   "   23\e[1;33m)\e[m  Info Script Auto Install"
-echo -e   "   24\e[1;33m)\e[m  Install BBR"
-#echo -e   "   24\e[1;33m)\e[m  Add ID Cloudflare"
-#echo -e   "   25\e[1;33m)\e[m  Cloudflare Add-Ons"
-#echo -e   "   26\e[1;33m)\e[m  Pointing BUG"
-echo -e   "   25\e[1;33m)\e[m  Clear log"
-echo -e   "   26\e[1;33m)\e[m  Auto Reboot"
-#echo -e   "   29\e[1;33m)\e[m  Panel-bot"
-echo -e   "   27\e[1;33m)\e[m  Pointing VPS"
 echo -e   "   \e[1;32m============================================================\e" | lolcat
 echo -e   "   x)   Exit" | lolcat
 echo -e   "   \e[1;32m============================================================\e" | lolcat
@@ -101,56 +82,8 @@ vleess
 10)
 trojaan
 ;;
-11)
-add-host
-;;
-12)
-certv2ray
-;;
-13)
-change-port
-;;
-14)
-autobackup
-;;
-15)
-backup
-;;
-16)
-restore
-;;
-17)
-wbmn
-;;
-18)
-limit-speed
-;;
-19)
-ram
-;;
-20)
-reboot
-;;
-21)
-speedtest
-;;
-22)
-info
-;;
-23)
-about
-;;
-24)
-bbr
-;;
-25)
-clear-log
-;;
-26)
-autoreboot
-;;
-27)
-point
+y)
+system
 ;;
 x)
 exit
