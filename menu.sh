@@ -16,7 +16,6 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	swap=$( free -m | awk 'NR==4 {print $2}' )
 	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
 
-echo -e "   \e[1;32m============================================================\e" | lolcat
 echo -e "   \e[032;1mCPU Model:\e[0m $cname"
 echo -e "   \e[032;1mNumber Of Cores:\e[0m $cores"
 echo -e "   \e[032;1mCPU Frequency:\e[0m $freq MHz"
@@ -26,8 +25,6 @@ echo -e "   \e[032;1mIsp Name:\e[0m $ISP"
 echo -e "   \e[032;1mCity:\e[0m $CITY"
 echo -e "   \e[032;1mTime:\e[0m $WKT"
 echo -e "   \e[032;1mIPVPS:\e[0m $IPVPS"
-echo -e "   \e[1;32m============================================================\e" | lolcat
-echo -e  ""
 echo -e  ""
 echo -e   "   \e[1;32m============================================================\e" | lolcat
 echo -e   "                             PANEL MENU\e" | lolcat 
@@ -44,12 +41,11 @@ echo -e   "   9\e[1;33m)\e[m Panel VLess"
 echo -e   "   10\e[1;33m)\e[m Panel Trojan"
 #echo -e   "   9\e[1;33m)\e[m Panel TrojanGO"
 echo -e   "   \e[1;32m============================================================\e" | lolcat
-echo -e   "   y)   System Menu" | lolcat
-echo -e   "   \e[1;32m============================================================\e" | lolcat
-echo -e   "   x)   Exit" | lolcat
+echo -e   "   y)   SYSTEM MENU" | lolcat
+echo -e   "   x)   EXIT" | lolcat
 echo -e   "   \e[1;32m============================================================\e" | lolcat
 echo -e   ""
-read -p "     Select From Options [1-10 or x,y] :  " menu
+read -p "     Select From Options [0-10 or x] :  " menu
 echo -e   ""
 case $menu in
 1)
@@ -82,7 +78,7 @@ vleess
 10)
 trojaan
 ;;
-y)
+0)
 system
 ;;
 x)
